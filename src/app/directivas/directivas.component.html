@@ -1,0 +1,13 @@
+<p>Los estudiantes pasaron:</p>
+<div *ngFor="let estudiante of estudiantes">
+    <p *ngIf="estudiante.nota>=5">
+        {{estudiante.nombre}} tuvo una nota de {{estudiante.nota}} y paso el curso de {{estudiante.curso}}
+    </p>
+    <p [ngClass]="estudiante.nota<=5 ? 'nopaso' : 'paso' ">
+        {{estudiante.nombre}}
+    </p>
+</div>
+
+<div *ngIf="estudiantes[0].nota>5">
+    se mostro a {{estudiantes[0].nombre}}
+</div>
